@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{171948A5-4A4B-4C3F-85DF-2D9AB33C87F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{661E7A6C-F5FF-468B-8BCB-9680BF0ACFE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collector", "src\Collector\Collector.csproj", "{AE892077-9003-4DA8-88CE-AFD6EC70AD65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collector.Tests", "test\Collector.Tests\Collector.Tests.csproj", "{B5843C9B-5A98-4083-9309-CE91B5B21B81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchServer.Debug", "src\WatchServer.Debug\WatchServer.Debug.csproj", "{BFFB1F28-4CC2-4F42-86C5-2EF3BCF138F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchServer.Core", "src\WatchServer.Core\WatchServer.Core.csproj", "{36D492F2-48E6-4AFB-9679-88E382CFCB6E}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "WatchServer.Database", "src\WatchServer.Database\WatchServer.Database.sqlproj", "{61B9F84F-B9CA-4072-979C-4C900E477129}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE892077-9003-4DA8-88CE-AFD6EC70AD65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE892077-9003-4DA8-88CE-AFD6EC70AD65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE892077-9003-4DA8-88CE-AFD6EC70AD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE892077-9003-4DA8-88CE-AFD6EC70AD65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5843C9B-5A98-4083-9309-CE91B5B21B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5843C9B-5A98-4083-9309-CE91B5B21B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5843C9B-5A98-4083-9309-CE91B5B21B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5843C9B-5A98-4083-9309-CE91B5B21B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFFB1F28-4CC2-4F42-86C5-2EF3BCF138F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFFB1F28-4CC2-4F42-86C5-2EF3BCF138F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFFB1F28-4CC2-4F42-86C5-2EF3BCF138F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFFB1F28-4CC2-4F42-86C5-2EF3BCF138F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D492F2-48E6-4AFB-9679-88E382CFCB6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36D492F2-48E6-4AFB-9679-88E382CFCB6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36D492F2-48E6-4AFB-9679-88E382CFCB6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36D492F2-48E6-4AFB-9679-88E382CFCB6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B9F84F-B9CA-4072-979C-4C900E477129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B9F84F-B9CA-4072-979C-4C900E477129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B9F84F-B9CA-4072-979C-4C900E477129}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{61B9F84F-B9CA-4072-979C-4C900E477129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B9F84F-B9CA-4072-979C-4C900E477129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B9F84F-B9CA-4072-979C-4C900E477129}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE892077-9003-4DA8-88CE-AFD6EC70AD65} = {171948A5-4A4B-4C3F-85DF-2D9AB33C87F2}
+		{B5843C9B-5A98-4083-9309-CE91B5B21B81} = {661E7A6C-F5FF-468B-8BCB-9680BF0ACFE1}
+		{BFFB1F28-4CC2-4F42-86C5-2EF3BCF138F9} = {171948A5-4A4B-4C3F-85DF-2D9AB33C87F2}
+		{36D492F2-48E6-4AFB-9679-88E382CFCB6E} = {171948A5-4A4B-4C3F-85DF-2D9AB33C87F2}
+		{61B9F84F-B9CA-4072-979C-4C900E477129} = {171948A5-4A4B-4C3F-85DF-2D9AB33C87F2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D3BCF6B-2955-4E71-9F5A-26B8408EF212}
+	EndGlobalSection
+EndGlobal

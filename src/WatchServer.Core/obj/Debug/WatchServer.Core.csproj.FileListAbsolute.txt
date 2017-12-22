@@ -1,0 +1,12 @@
+C:\Users\chris\OneDrive\Projects\WatchServer\src\WatchServer.Core\bin\Debug\WatchServer.Core.dll
+C:\Users\chris\OneDrive\Projects\WatchServer\src\WatchServer.Core\bin\Debug\WatchServer.Core.pdb
+C:\Users\chris\OneDrive\Projects\WatchServer\src\WatchServer.Core\obj\Debug\WatchServer.Core.csprojResolveAssemblyReference.cache
+C:\Users\chris\OneDrive\Projects\WatchServer\src\WatchServer.Core\obj\Debug\WatchServer.Core.csproj.CoreCompileInputs.cache
+C:\Users\chris\OneDrive\Projects\WatchServer\src\WatchServer.Core\obj\Debug\WatchServer.Core.dll
+C:\Users\chris\OneDrive\Projects\WatchServer\src\WatchServer.Core\obj\Debug\WatchServer.Core.pdb
+C:\Users\Christopher\OneDrive\Projects\WatchServer\src\WatchServer.Core\bin\Debug\WatchServer.Core.dll
+C:\Users\Christopher\OneDrive\Projects\WatchServer\src\WatchServer.Core\bin\Debug\WatchServer.Core.pdb
+C:\Users\Christopher\OneDrive\Projects\WatchServer\src\WatchServer.Core\obj\Debug\WatchServer.Core.csprojResolveAssemblyReference.cache
+C:\Users\Christopher\OneDrive\Projects\WatchServer\src\WatchServer.Core\obj\Debug\WatchServer.Core.csproj.CoreCompileInputs.cache
+C:\Users\Christopher\OneDrive\Projects\WatchServer\src\WatchServer.Core\obj\Debug\WatchServer.Core.dll
+C:\Users\Christopher\OneDrive\Projects\WatchServer\src\WatchServer.Core\obj\Debug\WatchServer.Core.pdb
