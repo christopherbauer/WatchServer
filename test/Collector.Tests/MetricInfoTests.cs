@@ -1,4 +1,6 @@
-﻿namespace Collector.Tests
+﻿using WatchServer.Core;
+
+namespace Collector.Tests
 {
     using System;
 
@@ -42,6 +44,21 @@
         [TestClass]
         public class WhenCheckEquals
         {
+            [TestMethod]
+            public void ThenShouldReturnFalseGivenDifferentCodeSameTime()
+            {
+                //arrange
+                var metricInfo1 = new MetricInfo(MetricCode.PercentCPU, new DateTime(2017, 12, 17));
+                var metricInfo2 = new MetricInfo(MetricCode.PercentRAM, new DateTime(2017, 12, 17));
+
+                //act
+                var result = metricInfo1.Equals(metricInfo2);
+                var result2 = metricInfo1.GetHashCode() == metricInfo2.GetHashCode();
+
+                //assert
+                Assert.IsFalse(result);
+                Assert.IsFalse(result2);
+            }
             [TestMethod]
             public void ThenShouldReturnTrueGivenSameInputs()
             {

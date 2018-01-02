@@ -15,6 +15,7 @@ namespace WatchServer.Core.Services.Reporting
         public IDictionary<MetricInfo, object> Reports { get; } = new Dictionary<MetricInfo, object>();
 
         public void WriteMetric<T>(MetricCode code, T value) {
+
             lock (lockObject)
             {
                 Reports.Add(new MetricInfo(code, DateTimeService.GetCurrentUTCDate()), value);

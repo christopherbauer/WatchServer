@@ -5,19 +5,19 @@
     public struct MetricInfo {
         public MetricInfo(MetricCode code, DateTime time)
         {
-            this.Code = code;
-            this.Time = time;
+            Code = code;
+            Time = time;
         }
 
         public MetricCode Code { get; }
         public DateTime Time { get; }
         public override int GetHashCode()
         {
-            return this.Code.GetHashCode() * 17 + this.Time.GetHashCode();
+            return Code.GetHashCode() * 17 + Time.GetHashCode();
         }
         public override bool Equals(object obj)
         {
-            return obj != null && obj is MetricInfo && this.GetHashCode() == obj.GetHashCode();
+            return obj != null && obj is MetricInfo && GetHashCode() == obj.GetHashCode();
         }
 
         private static int Compare(MetricInfo metricInfo1, MetricInfo metricInfo2)

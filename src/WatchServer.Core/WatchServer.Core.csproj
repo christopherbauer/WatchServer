@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,10 +53,12 @@
     <Compile Include="Services\Configuration\IConfigurationService.cs" />
     <Compile Include="Services\DateTimeService.cs" />
     <Compile Include="Services\IDateTimeService.cs" />
+    <Compile Include="Services\RAMHeartbeatService.cs" />
     <Compile Include="Services\Reporting\ConsoleReportingService.cs" />
     <Compile Include="Services\IMachineIdentificationService.cs" />
     <Compile Include="Services\MachineIdentificationService.cs" />
     <Compile Include="Services\Reporting\CPUHeartbeatService.cs" />
+    <Compile Include="Services\Reporting\IHeartbeatService.cs" />
     <Compile Include="Services\Reporting\IReportingService.cs" />
     <Compile Include="MetricCode.cs" />
     <Compile Include="MetricInfo.cs" />

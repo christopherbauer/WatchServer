@@ -4,16 +4,7 @@ using System.Threading;
 
 namespace WatchServer.Core.Services.Reporting
 {
-    public interface ICPUHeartbeatService
-    {
-        void WriteMetric();
-
-        void StartCollecting();
-
-        void StopCollecting();
-    }
-
-    public class CPUHeartbeatService : ICPUHeartbeatService
+    public class CPUHeartbeatService : IHeartbeatService
     {
         private readonly IReportingService _reportingService;
         readonly PerformanceCounter _cpuCounter = new PerformanceCounter();

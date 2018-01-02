@@ -59,6 +59,10 @@
       <Project>{AE892077-9003-4DA8-88CE-AFD6EC70AD65}</Project>
       <Name>Collector</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\WatchServer.Core\WatchServer.Core.csproj">
+      <Project>{36D492F2-48E6-4AFB-9679-88E382CFCB6E}</Project>
+      <Name>WatchServer.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

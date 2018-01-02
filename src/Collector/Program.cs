@@ -1,8 +1,4 @@
-﻿using System.Linq;
-using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
-using WatchServer.Core;
+﻿using System.ServiceProcess;
 using WatchServer.Core.Repositories;
 using WatchServer.Core.Services;
 using WatchServer.Core.Services.Configuration;

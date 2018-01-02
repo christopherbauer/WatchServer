@@ -15,9 +15,12 @@ namespace WatchServer.Debug
         static void Main(string[] args)
         {
             var appSettingConfigurationService = new AppSettingConfigurationService();
-            IReportingService reportingService = new SqlServerReportingService(new MachineIdentificationService(appSettingConfigurationService), new DateTimeService(), new WatchServerRepository(appSettingConfigurationService));
-            ICPUHeartbeatService heartbeatService = new CPUHeartbeatService(reportingService);
-            heartbeatService.StartCollecting();
+//            IReportingService reportingService = new SqlServerReportingService(new MachineIdentificationService(appSettingConfigurationService), new DateTimeService(), new WatchServerRepository(appSettingConfigurationService));
+            IReportingService reportingService = new ConsoleReportingService(new DateTimeService());
+//            IHeartbeatService cpuHeartbeatService = new CPUHeartbeatService(reportingService);
+            IHeartbeatService ramHeartbeatService = new RAMHeartbeatService(reportingService);
+//            cpuHeartbeatService.StartCollecting();
+            ramHeartbeatService.StartCollecting();
             var transmitTimer = new Timer(state => { reportingService.TransmitReports(); }, null, 0, (int) TimeSpan.FromSeconds(5).TotalMilliseconds);
 
             Console.ReadLine();
