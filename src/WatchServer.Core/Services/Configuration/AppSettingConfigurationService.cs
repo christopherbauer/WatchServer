@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 
 namespace WatchServer.Core.Services.Configuration
 {
@@ -24,6 +25,18 @@ namespace WatchServer.Core.Services.Configuration
             }
 
             return connectionStrings[key].ConnectionString;
+        }
+
+        public T GetSetting<T>(string key)
+        {
+            var appSettings = ConfigurationManager.AppSettings;
+            if (appSettings.Count == 0)
+            {
+                throw new ConfigurationException("No app settings!");
+            }
+
+            return (T)Convert.ChangeType(appSettings[key], typeof(T));
+
         }
     }
 }

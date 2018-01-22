@@ -21,7 +21,7 @@ namespace WatchServer.Core.Services
 
         public void WriteMetric()
         {
-            _reportingService.WriteMetric(MetricCode.PercentRAM, ((int)_ramCounter.NextValue()) / _totalRam);
+            _reportingService.WriteMetric(MetricCode.PercentRAM, _ramCounter.NextValue() / _totalRam);
         }
 
         public void StartCollecting()

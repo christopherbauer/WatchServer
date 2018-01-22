@@ -58,6 +58,9 @@
     <Compile Include="Services\IMachineIdentificationService.cs" />
     <Compile Include="Services\MachineIdentificationService.cs" />
     <Compile Include="Services\Reporting\CPUHeartbeatService.cs" />
+    <Compile Include="Services\Reporting\DiskDriveSizeHeartbeatService.cs" />
+    <Compile Include="Services\Reporting\DiskDriveTotalUsedHeartbeatService.cs" />
+    <Compile Include="Services\Reporting\HeartbeatServiceBase.cs" />
     <Compile Include="Services\Reporting\IHeartbeatService.cs" />
     <Compile Include="Services\Reporting\IReportingService.cs" />
     <Compile Include="MetricCode.cs" />

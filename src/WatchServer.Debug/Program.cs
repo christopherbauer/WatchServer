@@ -1,5 +1,4 @@
 ﻿using System;
-using WatchServer.Core.Repositories;
 using WatchServer.Core.Services;
 using WatchServer.Core.Services.Configuration;
 using WatchServer.Core.Services.Reporting;
@@ -7,7 +6,6 @@ using System.Threading;
 
 namespace WatchServer.Debug
 {
-
     class Program
     {
         private static Timer transmitTimer;
@@ -15,16 +13,15 @@ namespace WatchServer.Debug
         static void Main(string[] args)
         {
             var appSettingConfigurationService = new AppSettingConfigurationService();
-//            IReportingService reportingService = new SqlServerReportingService(new MachineIdentificationService(appSettingConfigurationService), new DateTimeService(), new WatchServerRepository(appSettingConfigurationService));
-            IReportingService reportingService = new ConsoleReportingService(new DateTimeService());
-//            IHeartbeatService cpuHeartbeatService = new CPUHeartbeatService(reportingService);
-            IHeartbeatService ramHeartbeatService = new RAMHeartbeatService(reportingService);
-//            cpuHeartbeatService.StartCollecting();
-            ramHeartbeatService.StartCollecting();
-            var transmitTimer = new Timer(state => { reportingService.TransmitReports(); }, null, 0, (int) TimeSpan.FromSeconds(5).TotalMilliseconds);
+            IReportingService reportingService = new ConsoleReportingService(new DateTimeService(), appSettingConfigurationService);
+            IHeartbeatService cpuHeartbeatService = new CPUHeartbeatService(appSettingConfigurationService, reportingService);
+            IHeartbeatService driveTotalUsedHeartbeatService = new DiskDriveTotalUsedHeartbeatService(appSettingConfigurationService, reportingService);
+            IHeartbeatService driveSizeHeartbeatService = new DiskDriveSizeHeartbeatService(appSettingConfigurationService, reportingService);
+            cpuHeartbeatService.StartCollecting();
+            driveTotalUsedHeartbeatService.StartCollecting();
+            driveSizeHeartbeatService.StartCollecting();
 
             Console.ReadLine();
-            Console.WriteLine(transmitTimer.ToString());
         }
     }
 }

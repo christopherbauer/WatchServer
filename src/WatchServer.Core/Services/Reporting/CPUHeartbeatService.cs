@@ -1,39 +1,27 @@
-﻿using System;
-using System.Diagnostics;
-using System.Threading;
+﻿using System.Diagnostics;
+using WatchServer.Core.Services.Configuration;
 
 namespace WatchServer.Core.Services.Reporting
 {
-    public class CPUHeartbeatService : IHeartbeatService
+    public class CPUHeartbeatService : HeartbeatServiceBase
     {
-        private readonly IReportingService _reportingService;
         readonly PerformanceCounter _cpuCounter = new PerformanceCounter();
 
-        private Timer timer;
-
-        public CPUHeartbeatService(IReportingService reportingService)
+        public CPUHeartbeatService(IConfigurationService configurationService, IReportingService reportingService) : base(configurationService, reportingService)
         {
-            _reportingService = reportingService;
         }
 
-        public void StartCollecting()
+        public override void StartCollecting()
         {
             _cpuCounter.CategoryName = "Processor";
             _cpuCounter.CounterName = "% Processor Time";
             _cpuCounter.InstanceName = "_Total";
-            var dueTime = (int)TimeSpan.FromSeconds(1).TotalMilliseconds;
-            timer = new Timer(state => WriteMetric(), null, 0, dueTime);
+            base.StartCollecting();
         }
 
-        public void WriteMetric()
+        public override void WriteMetric()
         {
-            _reportingService.WriteMetric(MetricCode.PercentCPU, _cpuCounter.NextValue());
-        }
-
-        public void StopCollecting()
-        {
-            timer.Dispose();
-            timer = null;
+            ReportingService.WriteMetric(MetricCode.PercentCPU, _cpuCounter.NextValue());
         }
     }
 }

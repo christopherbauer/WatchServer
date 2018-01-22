@@ -6,6 +6,7 @@ namespace WatchServer.Core.Services
     public class MachineIdentificationService : IMachineIdentificationService
     {
         private readonly IConfigurationService _configurationService;
+        private string _machineName;
 
         public MachineIdentificationService(IConfigurationService configurationService)
         {
@@ -14,12 +15,21 @@ namespace WatchServer.Core.Services
 
         public string GetMachineName()
         {
-            return Environment.MachineName;
+            if (string.IsNullOrEmpty(_machineName))
+            {
+                _machineName = Environment.MachineName;
+            }
+            return _machineName;
         }
 
+        private string _serverId;
         public string GetServerID()
         {
-            return _configurationService.GetSetting("ServerID");
+            if (string.IsNullOrEmpty(_serverId))
+            {
+                _serverId = _configurationService.GetSetting("ServerID");
+            }
+            return _serverId;
         }
     }
 }

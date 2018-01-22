@@ -21,7 +21,7 @@ namespace Collector
             IReportingService reportingService = new SqlServerReportingService(new MachineIdentificationService(appSettingConfigurationService), new DateTimeService(), new WatchServerRepository(appSettingConfigurationService));
             ServicesToRun = new ServiceBase[]
             {
-                new CPUCollectorService(new CPUHeartbeatService(reportingService))
+                new CPUCollectorService(new CPUHeartbeatService(appSettingConfigurationService, reportingService))
             };
             ServiceBase.Run(ServicesToRun);
             var transmitTimer = new Timer(state => { reportingService.ExtractReports(); }, null, TimeSpan.FromSeconds(2).Milliseconds, TimeSpan.FromSeconds(2).Milliseconds);

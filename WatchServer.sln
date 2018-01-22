@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{171948A5-4A4B-4C3F-85DF-2D9AB33C87F2}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchServer.Core", "src\WatchServer.Core\WatchServer.Core.csproj", "{36D492F2-48E6-4AFB-9679-88E382CFCB6E}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "WatchServer.Database", "src\WatchServer.Database\WatchServer.Database.sqlproj", "{61B9F84F-B9CA-4072-979C-4C900E477129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchServer.Core.Tests", "test\WatchServer.Core.Tests\WatchServer.Core.Tests.csproj", "{F9403407-A1CF-49AF-AF21-305EB985E24B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{61B9F84F-B9CA-4072-979C-4C900E477129}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61B9F84F-B9CA-4072-979C-4C900E477129}.Release|Any CPU.Build.0 = Release|Any CPU
 		{61B9F84F-B9CA-4072-979C-4C900E477129}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F9403407-A1CF-49AF-AF21-305EB985E24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9403407-A1CF-49AF-AF21-305EB985E24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9403407-A1CF-49AF-AF21-305EB985E24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9403407-A1CF-49AF-AF21-305EB985E24B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{BFFB1F28-4CC2-4F42-86C5-2EF3BCF138F9} = {171948A5-4A4B-4C3F-85DF-2D9AB33C87F2}
 		{36D492F2-48E6-4AFB-9679-88E382CFCB6E} = {171948A5-4A4B-4C3F-85DF-2D9AB33C87F2}
 		{61B9F84F-B9CA-4072-979C-4C900E477129} = {171948A5-4A4B-4C3F-85DF-2D9AB33C87F2}
+		{F9403407-A1CF-49AF-AF21-305EB985E24B} = {661E7A6C-F5FF-468B-8BCB-9680BF0ACFE1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D3BCF6B-2955-4E71-9F5A-26B8408EF212}
